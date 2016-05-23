@@ -2,17 +2,9 @@
 const PROXY_URL = 'http://188.166.73.133/gh-api'
 
 
-function removeAllChilren(node) {
-  for (let key of Object.keys(node.childNodes)) {
-    if (typeof node.childNodes[key] === 'object') node.removeChild(node.childNodes[key])
-  }
-}
-
-
 function renderSpinner(parent) {
   const domNode = document.createElement('div')
   domNode.setAttribute('class', 'spinner')
-  // removeAllChilren(parent)
   parent.innerHTML = ''
   parent.appendChild(domNode)
 }
@@ -52,13 +44,9 @@ function getUserSubmitCallback(nodeForResult) {
   }
 }
 
-function submitUserSearch() {
-
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   const profile = document.getElementsByClassName('profile')[0]
   const searchButton = document.getElementById('search')
   searchButton.addEventListener('click', getUserSubmitCallback(profile))
-  console.log('ready')
 })
