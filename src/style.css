@@ -1,4 +1,5 @@
 body {
+  font-family: verdana;
   background-color: #fafafa;
 }
 .search {
@@ -19,7 +20,16 @@ body {
   float: left;
 }
 .profile_data {
+  margin-left: 10px;
   float: left;
+}
+
+.profile_name {
+  margin: 0;
+}
+
+.profile_data-item {
+    margin: 8px 0 0;
 }
 
 .spinner {
