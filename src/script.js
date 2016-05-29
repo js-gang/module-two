@@ -13,7 +13,28 @@ function renderSpinner(parent) {
   parent.appendChild(domNode)
 }
 
-
+function loadUserRepos(node, username) {
+  renderSpinner(node)
+  fetch(`${PROXY_URL}/users/${username}/repos`)
+    .then(resp => resp.json())
+    .then(
+      repos => {
+        const html = repos.map(renderUserRepo).join('')
+        node.innerHTML = html
+      },
+      error => alert(error)
+    )
+}
+function renderUserRepo({name, language, stargazers_count, forks}) {
+  const tmpl = `
+  <div class="repo_item">
+    <p class="repo_item-name">${name}</p>
+    <p>language: ${language}</p>
+    <span>Stars: ${stargazers_count}, forks: ${forks}</span>
+  </div>
+  `
+  return tmpl
+}
 
 function renderUserProfile({avatar_url, name, email}) {
   const tmpl = `
@@ -40,6 +61,12 @@ function getUserSubmitCallback(nodeForResult) {
       .then(
         data => nodeForResult.innerHTML = renderUserProfile(data),
         error => alert('Unknow error')
+      )
+      .then(
+        () => {
+          const reposHolder = document.getElementsByClassName('profile_repos')[0]
+          return loadUserRepos(reposHolder, username)
+        }
       )
   }
 }

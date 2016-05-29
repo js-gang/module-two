@@ -38,5 +38,9 @@ body {
   margin: auto;
   background: url(./loading.svg) no-repeat;
   background-size: 120px 120px;
+}
 
+.repo_item-name {
+  font-size: 14px;
+  font-weight: 700;
 }
