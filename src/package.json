@@ -1,0 +1,19 @@
+{
+  "name": "js-learning-project",
+  "version": "1.0.0",
+  "description": "Training project for JS Course Module 2",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "course",
+    "training"
+  ],
+  "author": "js-gang",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
