@@ -21,6 +21,16 @@ module.exports = {
   resolve: {
     root: appPath,
   },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['babel-loader'],
+        include: appPath,
+      },
+    ],
+
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
