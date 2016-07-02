@@ -1,4 +1,4 @@
-function renderUserRepo({name, language, stargazers_count, forks}) {
+export default function renderUserRepo({name, language, stargazers_count, forks}) {
   const tmpl = `
   <div class="repo_item">
     <p class="repo_item-name">${name}</p>
@@ -8,5 +8,3 @@ function renderUserRepo({name, language, stargazers_count, forks}) {
   `
   return tmpl
 }
-
-module.exports = renderUserRepo
