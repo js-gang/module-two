@@ -1,7 +1,7 @@
 import { assert } from 'chai'
 
-import showSpinner from '../src/renderers/spinner'
-import renderUserProfile from '../src/renderers/user_profile'
+import showSpinner from 'renderers/spinner'
+import renderUserProfile from 'renderers/user_profile'
 
 describe('Spinner renderer', function() {
   it('should replace content of passed node and put div with spinner', function() {
