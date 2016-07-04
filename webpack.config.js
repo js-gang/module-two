@@ -28,6 +28,18 @@ module.exports = {
         loaders: ['babel-loader'],
         include: appPath,
       },
+      {
+        test: /\.css$/,
+        loader: 'style!css',
+      },
+      {
+        test: /\.(woff|eot|ttf|svg|png|jpg)$/,
+        loader: 'file',
+        query: {
+          name: '[path][name].[ext]?[hash]',
+          context: appPath,
+        }
+      }
     ],
 
   },

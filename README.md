@@ -9,4 +9,3 @@ Second part of JS course program. Here we will show how to set up perfect enviro
 # TODO
 
 - Add css loader to webpack
-- Add jsdom for test
