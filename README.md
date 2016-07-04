@@ -8,4 +8,6 @@ Second part of JS course program. Here we will show how to set up perfect enviro
 
 # TODO
 
-- Add css loader to webpack
+- Fix bug with spinner when user's repos are loading
+- Add search handler on enter key in input
+- Write more test and add mockery
