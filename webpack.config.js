@@ -25,7 +25,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        loaders: ['babel', 'eslint'],
         include: appPath,
       },
     ],
