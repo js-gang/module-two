@@ -4,7 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 module.exports = {
-  context: appPath,
   entry: {
     bundle: 'app.js',
   },
@@ -25,19 +24,17 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
-        include: appPath,
+        loaders: ['babel-loader']
       },
       {
         test: /\.css$/,
         loader: 'style!css',
       },
       {
-        test: /\.(woff|eot|ttf|svg|png|jpg)$/,
+        test: /\.(gif|svg|png|jpg)$/,
         loader: 'file',
         query: {
-          name: '[path][name].[ext]?[hash]',
-          context: appPath,
+          name: '[path][name].[ext]?[hash]'
         }
       }
     ],
