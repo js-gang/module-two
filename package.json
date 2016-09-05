@@ -6,7 +6,8 @@
   "scripts": {
     "prestart": "npm install",
     "start": "webpack-dev-server",
-    "test": "NODE_PATH=./src mocha --compilers js:babel-core/register --require jsdom-global/register --require whatwg-fetch/fetch"
+    "test": "NODE_PATH=./src mocha --compilers js:babel-core/register --recursive --require jsdom-global/register --require whatwg-fetch/fetch",
+    "coverage": "nyc --reporter=lcov --reporter=html npm test"
   },
   "keywords": [
     "javascript",
@@ -27,6 +28,7 @@
     "jsdom": "9.3.0",
     "jsdom-global": "2.0.0",
     "mocha": "^2.5.3",
+    "nyc": "^8.1.0",
     "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
