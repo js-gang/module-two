@@ -9,7 +9,7 @@ sinonStubPromise(sinon)
 
 describe('search handler', function() {
   let showSpinnerStub = sinon.stub()
-  let userLoaderStub = sinon.stub().returnsPromise()
+  let userLoaderStub = sinon.stub().resolves({}).returnsPromise()
 
   let loadProfile
   before(function(){
